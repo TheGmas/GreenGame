@@ -2,46 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowMouse : MonoBehaviour {
+public class FollowMouse : MonoBehaviour
+{
 
-    private int check;
 
     // Use this for initialization
     void Start()
     {
 
-        check = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mouse = Input.mousePosition;
-        if (check == 1)
+        if (Input.GetMouseButtonDown(0))
         {
-
-            if (1 == 1)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100) && hit.point.y < 1.01f)
             {
-                mouse.z = 15f; // distance from camera
-            }
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.transform.localScale = new Vector3(1.01f, 1.01f, 1.01f);
+                float rx = (float)(Mathf.RoundToInt(hit.point.x));
+                float ry = (float)(Mathf.RoundToInt(hit.point.y));
+                float rz = (float)(Mathf.RoundToInt(hit.point.z));
+                cube.transform.position = new Vector3(rx, ry, rz) + new Vector3(0, 0.5F, 0);
 
-            this.transform.position = Camera.main.ScreenToWorldPoint(mouse);
 
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
-            {
-                mouse.z = mouse.z - 1f;
-            }
-
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
-            {
-                mouse.z--;
-            }
-
-            else if (Input.GetMouseButtonDown(0))
-            {
-                check = 2;
+                Rigidbody rgbd = cube.AddComponent<Rigidbody>();
+                rgbd.useGravity = false;
+                rgbd.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
     }
 }
-

@@ -341,6 +341,7 @@
     <Compile Include="Assets\Content\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Content\Scripts\FollowMouse.cs" />
     <Compile Include="Assets\Content\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\Content\Scripts\PushOut.cs" />
     <Compile Include="Assets\Content\Scripts\SpawnCube.cs" />
   </ItemGroup>
   <ItemGroup>

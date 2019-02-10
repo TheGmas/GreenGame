@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4464644763109202}
   - component: {fileID: 33828290284354976}
   - component: {fileID: 23908561299015852}
-  - component: {fileID: 114761966170808096}
   - component: {fileID: 64222154685725242}
   m_Layer: 0
   m_Name: Coal_Factory
@@ -102,20 +101,3 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 86743e284c5740f45a0144a16d51bad8, type: 3}
---- !u!114 &114761966170808096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491953299282960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c95c4189833d0b4c8be54d1d215032d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneytext: {fileID: 0}
-  energyText: {fileID: 0}
-  coalNumb: 0
-  coalEnergy: 0
-  houseNumb: 0
-  houseMoney: 0

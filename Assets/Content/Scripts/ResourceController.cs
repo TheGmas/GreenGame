@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class ResourceController : MonoBehaviour {
 
-    public Text moneytext, energyText;
+    public Text moneytext, energyText; // Creates a public text gameObject
     public int coalNumb, coalEnergy, houseNumb, houseMoney;
     float time;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        // Set as Default
         moneytext.text = "100";
         energyText.text = "5";
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         coalNumb = GameObject.FindGameObjectsWithTag("CoalFact").Length;
         time += Time.deltaTime;
         coalEnergy = int.Parse(energyText.text);

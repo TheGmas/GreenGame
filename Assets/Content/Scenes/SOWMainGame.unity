@@ -35,16 +35,16 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.9
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.42503536, g: 0.47272873, b: 0.547766, a: 0.9}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000062, guid: d2478cf14e30dcf408352adf77a98688,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -163,6 +164,10 @@ Prefab:
     - target: {fileID: 400000, guid: ac4e46f0764270743adbe9029235ab24, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac4e46f0764270743adbe9029235ab24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac4e46f0764270743adbe9029235ab24, type: 3}
@@ -332,7 +337,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &27027755
 MonoBehaviour:
@@ -443,7 +448,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &47080254
 MonoBehaviour:
@@ -621,6 +626,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 99.996765
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 773e55d5ef795564bba80baa754119ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773e55d5ef795564bba80baa754119ad, type: 3}
   m_IsPrefabAsset: 0
@@ -641,7 +650,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &97503240
 MonoBehaviour:
@@ -877,7 +886,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &159366519
 MonoBehaviour:
@@ -1018,6 +1027,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 566b4699c750a2b47ab2cc507f6e68bc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 566b4699c750a2b47ab2cc507f6e68bc, type: 3}
   m_IsPrefabAsset: 0
@@ -1038,7 +1051,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &173540511
 MonoBehaviour:
@@ -1290,6 +1303,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f3dbcc82fc6114408ecbec91cb21eea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3dbcc82fc6114408ecbec91cb21eea, type: 3}
   m_IsPrefabAsset: 0
@@ -1315,7 +1332,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &250572422
 MonoBehaviour:
@@ -1690,7 +1707,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &325013867
 MonoBehaviour:
@@ -1963,6 +1980,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 9.147603
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cdc49041f9b9c784482858c9775f2cbc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdc49041f9b9c784482858c9775f2cbc, type: 3}
   m_IsPrefabAsset: 0
@@ -1983,7 +2004,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &403079433
 MonoBehaviour:
@@ -2122,7 +2143,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &424720838
 MonoBehaviour:
@@ -2263,6 +2284,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 62.99999
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e3ca495df7fe2a54a853efb123d98f77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3ca495df7fe2a54a853efb123d98f77, type: 3}
   m_IsPrefabAsset: 0
@@ -2317,6 +2342,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 301.29446
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de97f1e06d865fe4a8d06fe8fc1789b2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de97f1e06d865fe4a8d06fe8fc1789b2, type: 3}
   m_IsPrefabAsset: 0
@@ -2337,7 +2366,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &457730030
 MonoBehaviour:
@@ -2585,6 +2614,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 39.99999
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37e87594d26ec9a4eb0050b2d4009f0e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37e87594d26ec9a4eb0050b2d4009f0e, type: 3}
   m_IsPrefabAsset: 0
@@ -2714,7 +2747,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &533716246
 MonoBehaviour:
@@ -2853,7 +2886,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &574133312
 MonoBehaviour:
@@ -3346,6 +3379,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f95e795d67d55f84485b84091ce9eaf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95e795d67d55f84485b84091ce9eaf7, type: 3}
   m_IsPrefabAsset: 0
@@ -3366,7 +3403,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &813294882
 MonoBehaviour:
@@ -3477,7 +3514,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &829272479
 MonoBehaviour:
@@ -3616,7 +3653,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &858632611
 MonoBehaviour:
@@ -3761,6 +3798,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 99.999985
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7997ed81e0aaf83408c39273f164b9aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7997ed81e0aaf83408c39273f164b9aa, type: 3}
   m_IsPrefabAsset: 0
@@ -3781,7 +3822,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &874875268
 MonoBehaviour:
@@ -3926,6 +3967,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 99.996704
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb503806302707b44be2d18b7dac11d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb503806302707b44be2d18b7dac11d1, type: 3}
   m_IsPrefabAsset: 0
@@ -3980,6 +4025,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 13.639875
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 741bbad2776557e4a815bb9405160de5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 741bbad2776557e4a815bb9405160de5, type: 3}
   m_IsPrefabAsset: 0
@@ -4000,7 +4049,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &914477956
 MonoBehaviour:
@@ -4111,7 +4160,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &932959839
 MonoBehaviour:
@@ -4363,7 +4412,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &984581443
 MonoBehaviour:
@@ -4474,7 +4523,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1001658494
 MonoBehaviour:
@@ -4802,7 +4851,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1163233912
 MonoBehaviour:
@@ -4968,7 +5017,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1204817654
 MonoBehaviour:
@@ -5323,7 +5372,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1379466245
 MonoBehaviour:
@@ -5434,7 +5483,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1401232492
 MonoBehaviour:
@@ -5722,7 +5771,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1453992985
 MonoBehaviour:
@@ -6322,6 +6371,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 99.996765
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 908df5369560ef440baed0739419a11b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 908df5369560ef440baed0739419a11b, type: 3}
   m_IsPrefabAsset: 0
@@ -6445,7 +6498,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1671448293
 MonoBehaviour:
@@ -6556,7 +6609,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1683663058
 MonoBehaviour:
@@ -6729,6 +6782,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 99.996704
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 95e395106759d404390ec58d3333a91a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95e395106759d404390ec58d3333a91a, type: 3}
   m_IsPrefabAsset: 0
@@ -6749,7 +6806,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1778112616
 MonoBehaviour:
@@ -6893,6 +6950,10 @@ Prefab:
     - target: {fileID: 400000, guid: e9f3e6398e6a17c4e8b6e391dd9e167a, type: 3}
       propertyPath: m_LocalScale.z
       value: 79.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9f3e6398e6a17c4e8b6e391dd9e167a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f3e6398e6a17c4e8b6e391dd9e167a, type: 3}
@@ -7329,7 +7390,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &2031467458
 MonoBehaviour:
@@ -7440,7 +7501,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &2038958441
 MonoBehaviour:

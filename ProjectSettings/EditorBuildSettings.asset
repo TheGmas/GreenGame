@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Content/Scenes/SOWSettings.unity
     guid: 81c18ac0ae6cf4e3e9b50b95f0227965
+  - enabled: 1
+    path: Assets/Content/Scenes/SOWMainGame.unity
+    guid: 7caa0c96f9bda8f439120492c55b5826
   m_configObjects: {}

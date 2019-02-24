@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Building
-  - CoalFact
   - House
+  - Factory
   layers:
   - Default
   - TransparentFX

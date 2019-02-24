@@ -5,39 +5,37 @@ using UnityEngine.UI;
 
 public class ResourceController : MonoBehaviour {
 
-    public Text moneytext, energyText; // Creates a public text gameObject
-    public int coalNumb, coalEnergy, houseNumb, houseMoney;
+    public Text moneyText, energyText; // Creates a public text gameObject
+    public int factoryNumb, factoryEnergy, houseNumb, houseMoney;
     float time;
 
 	// Use this for initialization
 	void Start ()
     {
         // Set as Default
-        moneytext.text = "100";
+        moneyText.text = "100";
         energyText.text = "5";
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        coalNumb = GameObject.FindGameObjectsWithTag("CoalFact").Length;
+        factoryNumb = GameObject.FindGameObjectsWithTag("Factory").Length;
         time += Time.deltaTime;
-        coalEnergy = int.Parse(energyText.text);
-        houseMoney = int.Parse(moneytext.text);
+        factoryEnergy = int.Parse(energyText.text);
+        houseMoney = int.Parse(moneyText.text);
         
-
         houseNumb = GameObject.FindGameObjectsWithTag("House").Length;
         
         if(time > 1)
         {
-            coalEnergy += coalNumb * 1;
-            energyText.text = coalEnergy.ToString();
+            factoryEnergy += factoryNumb * 1;
+            energyText.text = factoryEnergy.ToString();
 
             houseMoney += houseNumb * 2;
-            moneytext.text = houseMoney.ToString();
+            moneyText.text = houseMoney.ToString();
 
             time = 0;
-            
         }
     }
 }

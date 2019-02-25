@@ -7,9 +7,9 @@ public class SpawnOnPlane : MonoBehaviour
 {
     bool spawned = false;
     int buildingNumb, moneyInt, energyInt;
-    public GameObject factory, house;
+    public GameObject factory, factory1, house, house2, house3, windTurbine, tree1, tree2, solarPanel, apartment, smallStore, supermarket;
     public Material green, lightGreen;
-    public Button factoryBtn, houseBtn, backBtn, demolishBtn;
+    public Button factoryBtn, factory1Btn, houseBtn, houseBtn2, houseBtn3, windTurbineBtn, tree1Btn, tree2Btn, solarPanelBtn, apartmentBtn, smallStoreBtn, supermarketBtn, backBtn, demolishBtn;
     public Text moneyText, energyText;
     GameObject build;
     RaycastHit BuildCheck;

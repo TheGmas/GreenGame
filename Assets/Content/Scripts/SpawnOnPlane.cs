@@ -18,6 +18,8 @@ public class SpawnOnPlane : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
+        //add a listener for the desired button
+
         factoryBtn.onClick.AddListener(factoryButton);
         houseBtn.onClick.AddListener(houseButton);
         backBtn.onClick.AddListener(returnButton);
@@ -35,6 +37,12 @@ public class SpawnOnPlane : MonoBehaviour
     {
         if (!spawned)
         {
+            //creating the if statement. 
+            //the building numb here should be the same as the one desired - set below in a seperate function.
+            //use and statement to check if player has required money/energy
+            //instantiate the desired model on the same spot as the plane, adjust money/energy int
+            //use moneyText.text = moneyInt.ToString(); and/or energyText.text = energyInt.ToString(); to update on screen
+            //after that, button should work and place buildings.
             if (buildingNumb == 1 && moneyInt >= 25)
             {
                 build = Instantiate(factory, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0))) as GameObject;
@@ -54,12 +62,13 @@ public class SpawnOnPlane : MonoBehaviour
         }
         else if (buildingNumb == 3)
         {
-            print("builddest");
+
             Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
             foreach (Collider hit in built)
             {
                 if(hit.tag == "House" || hit.tag == "Factory")
                 {
+                   
                     Destroy(hit.gameObject);
                     spawned = false;
                 }
@@ -76,7 +85,7 @@ public class SpawnOnPlane : MonoBehaviour
     {
         GetComponent<Renderer>().material = green;
     }
-
+    //create function with same name as listener to change building numb
     void factoryButton()
     {
         buildingNumb = 1;

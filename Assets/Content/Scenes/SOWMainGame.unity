@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 5511847}
   - component: {fileID: 5511846}
   - component: {fileID: 5511845}
+  - component: {fileID: 5511848}
   m_Layer: 5
   m_Name: Tree_2
   m_TagString: Untagged
@@ -356,6 +357,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5511843}
   m_CullTransparentMesh: 0
+--- !u!114 &5511848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5511843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &6115820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,6 +3142,9 @@ RectTransform:
   - {fileID: 194917620}
   - {fileID: 1339090993}
   - {fileID: 670575635}
+  - {fileID: 1598025584}
+  - {fileID: 1125978372}
+  - {fileID: 413436354}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12208,6 +12226,76 @@ Transform:
   m_Father: {fileID: 2063933030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &413436353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413436354}
+  - component: {fileID: 413436356}
+  - component: {fileID: 413436355}
+  m_Layer: 5
+  m_Name: DemolishRolloverPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &413436354
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 413436353}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.182, y: 0.077939995, z: 1}
+  m_Children:
+  - {fileID: 2071195985}
+  m_Father: {fileID: 106267865}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 450.7, y: -213.6}
+  m_SizeDelta: {x: -449, y: -14.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &413436355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 413436353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &413436356
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 413436353}
+  m_CullTransparentMesh: 0
 --- !u!1 &414822465
 GameObject:
   m_ObjectHideFlags: 0
@@ -13754,7 +13842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.04882644, y: 0.08059427}
   m_AnchorMax: {x: 0.17024563, y: 0.952}
-  m_AnchoredPosition: {x: 3.699768, y: -9.999939}
+  m_AnchoredPosition: {x: 3.699829, y: -9.999939}
   m_SizeDelta: {x: -48.1, y: -3.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474008759
@@ -16473,6 +16561,7 @@ GameObject:
   - component: {fileID: 542206829}
   - component: {fileID: 542206828}
   - component: {fileID: 542206827}
+  - component: {fileID: 542206830}
   m_Layer: 5
   m_Name: Factory_2
   m_TagString: Untagged
@@ -16584,6 +16673,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542206825}
   m_CullTransparentMesh: 0
+--- !u!114 &542206830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 542206825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &544391327
 GameObject:
   m_ObjectHideFlags: 0
@@ -19898,6 +20001,7 @@ GameObject:
   - component: {fileID: 685213530}
   - component: {fileID: 685213529}
   - component: {fileID: 685213528}
+  - component: {fileID: 685213531}
   m_Layer: 5
   m_Name: House_1
   m_TagString: Untagged
@@ -20009,6 +20113,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685213526}
   m_CullTransparentMesh: 0
+--- !u!114 &685213531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685213526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &685511225
 GameObject:
   m_ObjectHideFlags: 0
@@ -20020,6 +20138,7 @@ GameObject:
   - component: {fileID: 685511229}
   - component: {fileID: 685511228}
   - component: {fileID: 685511227}
+  - component: {fileID: 685511230}
   m_Layer: 5
   m_Name: Factory_1
   m_TagString: Untagged
@@ -20120,6 +20239,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685511225}
   m_CullTransparentMesh: 0
+--- !u!114 &685511230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685511225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &690342671
 GameObject:
   m_ObjectHideFlags: 0
@@ -24794,6 +24927,85 @@ Transform:
   m_Father: {fileID: 419402956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &861463973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 861463974}
+  - component: {fileID: 861463976}
+  - component: {fileID: 861463975}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &861463974
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 861463973}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.4945054, y: 12.830384, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1598025584}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.6552, y: 7.7279}
+  m_SizeDelta: {x: 210.72, y: 61.063}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &861463975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 861463973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'A set of houses.
+
+    Produces money.
+
+    Costs $20 and 5 Energy.'
+--- !u!222 &861463976
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 861463973}
+  m_CullTransparentMesh: 0
 --- !u!1001 &861556296
 Prefab:
   m_ObjectHideFlags: 0
@@ -29152,6 +29364,7 @@ GameObject:
   - component: {fileID: 1027615753}
   - component: {fileID: 1027615752}
   - component: {fileID: 1027615751}
+  - component: {fileID: 1027615754}
   m_Layer: 5
   m_Name: House_2
   m_TagString: Untagged
@@ -29252,6 +29465,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027615749}
   m_CullTransparentMesh: 0
+--- !u!114 &1027615754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027615749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &1028651158
 GameObject:
   m_ObjectHideFlags: 0
@@ -30568,6 +30795,7 @@ GameObject:
   - component: {fileID: 1078440283}
   - component: {fileID: 1078440282}
   - component: {fileID: 1078440281}
+  - component: {fileID: 1078440284}
   m_Layer: 5
   m_Name: Supermarket
   m_TagString: Untagged
@@ -30668,6 +30896,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1078440279}
   m_CullTransparentMesh: 0
+--- !u!114 &1078440284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078440279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &1080335863
 GameObject:
   m_ObjectHideFlags: 0
@@ -32530,6 +32772,76 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124406338}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1125978371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125978372}
+  - component: {fileID: 1125978374}
+  - component: {fileID: 1125978373}
+  m_Layer: 5
+  m_Name: FactoryRolloverPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1125978372
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1125978371}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.182, y: 0.077939995, z: 1}
+  m_Children:
+  - {fileID: 1218968579}
+  m_Father: {fileID: 106267865}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -116.41, y: -207.92}
+  m_SizeDelta: {x: -268.08, y: 130.47}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1125978373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1125978371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1125978374
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1125978371}
+  m_CullTransparentMesh: 0
 --- !u!1 &1127736366
 GameObject:
   m_ObjectHideFlags: 0
@@ -33494,6 +33806,7 @@ GameObject:
   - component: {fileID: 1172095455}
   - component: {fileID: 1172095454}
   - component: {fileID: 1172095453}
+  - component: {fileID: 1172095456}
   m_Layer: 5
   m_Name: House_3
   m_TagString: Untagged
@@ -33594,6 +33907,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1172095451}
   m_CullTransparentMesh: 0
+--- !u!114 &1172095456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1172095451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &1172995498
 GameObject:
   m_ObjectHideFlags: 0
@@ -35059,6 +35386,81 @@ Transform:
   m_Father: {fileID: 2089173343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1218968578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218968579}
+  - component: {fileID: 1218968581}
+  - component: {fileID: 1218968580}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1218968579
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218968578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.4945054, y: 12.830384, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1125978372}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.6552, y: 41}
+  m_SizeDelta: {x: 210.7, y: 66}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1218968580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218968578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "A factory.\nProduces energy but \nraises temperature.\nCost:$25"
+--- !u!222 &1218968581
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218968578}
+  m_CullTransparentMesh: 0
 --- !u!1 &1219055542
 GameObject:
   m_ObjectHideFlags: 0
@@ -36843,7 +37245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1339090993
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43067,6 +43469,7 @@ GameObject:
   - component: {fileID: 1566686017}
   - component: {fileID: 1566686016}
   - component: {fileID: 1566686015}
+  - component: {fileID: 1566686018}
   m_Layer: 5
   m_Name: Apartments
   m_TagString: Untagged
@@ -43167,6 +43570,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566686013}
   m_CullTransparentMesh: 0
+--- !u!114 &1566686018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566686013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &1566827681
 GameObject:
   m_ObjectHideFlags: 0
@@ -43309,6 +43726,7 @@ GameObject:
   - component: {fileID: 1568845329}
   - component: {fileID: 1568845328}
   - component: {fileID: 1568845327}
+  - component: {fileID: 1568845330}
   m_Layer: 5
   m_Name: Tree_1
   m_TagString: Untagged
@@ -43409,6 +43827,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568845325}
   m_CullTransparentMesh: 0
+--- !u!114 &1568845330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1568845325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1001 &1568847872
 Prefab:
   m_ObjectHideFlags: 0
@@ -44139,6 +44571,76 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1597376599}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1598025583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598025584}
+  - component: {fileID: 1598025586}
+  - component: {fileID: 1598025585}
+  m_Layer: 5
+  m_Name: HouseRolloverPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1598025584
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598025583}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.182, y: 0.077939995, z: 1}
+  m_Children:
+  - {fileID: 861463974}
+  m_Father: {fileID: 106267865}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -395.12, y: -213}
+  m_SizeDelta: {x: 130.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1598025585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598025583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1598025586
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598025583}
+  m_CullTransparentMesh: 0
 --- !u!1 &1600929255
 GameObject:
   m_ObjectHideFlags: 0
@@ -44499,6 +45001,7 @@ GameObject:
   - component: {fileID: 1617308418}
   - component: {fileID: 1617308417}
   - component: {fileID: 1617308416}
+  - component: {fileID: 1617308419}
   m_Layer: 5
   m_Name: SmallStore
   m_TagString: Untagged
@@ -44599,6 +45102,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1617308414}
   m_CullTransparentMesh: 0
+--- !u!114 &1617308419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1617308414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &1619254602
 GameObject:
   m_ObjectHideFlags: 0
@@ -50637,6 +51154,7 @@ GameObject:
   - component: {fileID: 1867311414}
   - component: {fileID: 1867311413}
   - component: {fileID: 1867311412}
+  - component: {fileID: 1867311415}
   m_Layer: 5
   m_Name: WindTurbine
   m_TagString: Untagged
@@ -50737,6 +51255,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1867311410}
   m_CullTransparentMesh: 0
+--- !u!114 &1867311415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867311410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &1871711375
 GameObject:
   m_ObjectHideFlags: 0
@@ -53464,6 +53996,8 @@ GameObject:
   - component: {fileID: 2003503601}
   - component: {fileID: 2003503600}
   - component: {fileID: 2003503599}
+  - component: {fileID: 2003503603}
+  - component: {fileID: 2003503602}
   m_Layer: 5
   m_Name: Tree_2 (1)
   m_TagString: Untagged
@@ -53564,6 +54098,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003503597}
   m_CullTransparentMesh: 0
+--- !u!114 &2003503602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003503597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 0}
+  factoryRollover: {fileID: 0}
+  demolishRollover: {fileID: 0}
+--- !u!114 &2003503603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003503597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &2003579050
 GameObject:
   m_ObjectHideFlags: 0
@@ -56550,6 +57112,83 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3463de68c1a4eb14d950c2c18c26e458, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &2071195984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071195985}
+  - component: {fileID: 2071195987}
+  - component: {fileID: 2071195986}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2071195985
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071195984}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.4945054, y: 12.830384, z: 1}
+  m_Children: []
+  m_Father: {fileID: 413436354}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.6552, y: -86.8}
+  m_SizeDelta: {x: 210.7, y: 46.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2071195986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071195984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Destroy
+
+    a building'
+--- !u!222 &2071195987
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071195984}
+  m_CullTransparentMesh: 0
 --- !u!1 &2072490494
 GameObject:
   m_ObjectHideFlags: 0
@@ -56851,6 +57490,7 @@ GameObject:
   - component: {fileID: 2084161731}
   - component: {fileID: 2084161730}
   - component: {fileID: 2084161729}
+  - component: {fileID: 2084161732}
   m_Layer: 5
   m_Name: Demolish
   m_TagString: Untagged
@@ -56963,6 +57603,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084161727}
   m_CullTransparentMesh: 0
+--- !u!114 &2084161732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084161727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017009e4039271f4b9653c28039a71a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseRollover: {fileID: 1598025583}
+  factoryRollover: {fileID: 1125978371}
+  demolishRollover: {fileID: 413436353}
 --- !u!1 &2085539436
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RollOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    //set this to a seperate panel with text of building description
+    // Set this to a seperate panel with text of building description
     public GameObject houseRollover, factoryRollover, demolishRollover;
 
     public void OnPointerEnter(PointerEventData eventData)

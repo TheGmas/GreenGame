@@ -64,6 +64,7 @@
     <Compile Include="Assets\Content\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Content\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\Content\Scripts\ResourceController.cs" />
+    <Compile Include="Assets\Content\Scripts\RollOver.cs" />
     <Compile Include="Assets\Content\Scripts\SpawnOnPlane.cs" />
     <Compile Include="Assets\Content\Scripts\UIController.cs" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">

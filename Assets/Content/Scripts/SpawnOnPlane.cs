@@ -18,7 +18,7 @@ public class SpawnOnPlane : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
-        //add a listener for the desired button
+        // Add a listener for the desired button
 
         factoryBtn.onClick.AddListener(factoryButton);
         factory1Btn.onClick.AddListener(factory1Button);
@@ -48,20 +48,21 @@ public class SpawnOnPlane : MonoBehaviour
     {
         if (!spawned)
         {
-            //creating the if statement. 
-            //the building numb here should be the same as the one desired - set below in a seperate function.
-            //use and statement to check if player has required money/energy
-            //instantiate the desired model on the same spot as the plane, adjust money/energy int
-            //use moneyText.text = moneyInt.ToString(); and/or energyText.text = energyInt.ToString(); to update on screen
-            //after that, button should work and place buildings.
-            if (buildingNumb == 1 && moneyInt >= 25) //factory
+            // Creating the if statement. 
+            // The building numb here should be the same as the one desired - set below in a seperate function.
+            // Use and statement to check if player has required money/energy
+            // instantiate the desired model on the same spot as the plane, adjust money/energy int
+            // use moneyText.text = moneyInt.ToString(); and/or energyText.text = energyInt.ToString(); to update on screen
+            // After that, button should work and place buildings.
+
+            if (buildingNumb == 1 && moneyInt >= 25) //factory state
             {
                 build = Instantiate(factory, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0))) as GameObject;
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
             }
-            else if (buildingNumb == 2 && moneyInt >= 20 && energyInt >= 5) //house1
+            else if (buildingNumb == 2 && moneyInt >= 20 && energyInt >= 5) //house1 state
             {
                 Instantiate(house, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
@@ -70,7 +71,7 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
             }
-            else if (buildingNumb == 4 && moneyInt >= 20 && energyInt >= 5) //house2
+            else if (buildingNumb == 4 && moneyInt >= 20 && energyInt >= 5) //house2 state
             {
                 Instantiate(house2, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
@@ -79,14 +80,14 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
             }
-            else if (buildingNumb == 5 && moneyInt >= 25) //factory1
+            else if (buildingNumb == 5 && moneyInt >= 25) // factory1 state
             {
                 Instantiate(factory1, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
             }
-            else if (buildingNumb == 6 && moneyInt >= 20 && energyInt >= 5) //house3
+            else if (buildingNumb == 6 && moneyInt >= 20 && energyInt >= 5) // house3 state
             {
                 Instantiate(house3, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
@@ -95,35 +96,35 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
             }
-            else if (buildingNumb == 7 && moneyInt >= 25) //windturbine
+            else if (buildingNumb == 7 && moneyInt >= 25) // windturbine state
             {
                 Instantiate(windTurbine, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
             }
-            else if (buildingNumb == 8 && moneyInt >= 25) //tree1
+            else if (buildingNumb == 8 && moneyInt >= 25) // tree1 state
             {
                 Instantiate(tree1, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
             }
-            else if (buildingNumb == 9 && moneyInt >= 25) //tree2
+            else if (buildingNumb == 9 && moneyInt >= 25) // tree2 state
             {
                 Instantiate(tree2, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
             }
-            else if (buildingNumb == 10 && moneyInt >= 25) //solarPanel
+            else if (buildingNumb == 10 && moneyInt >= 25) // solarPanel state
             {
                 Instantiate(solarPanel, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
             }
-            else if (buildingNumb == 11 && moneyInt >= 20 && energyInt >= 5) //apartment
+            else if (buildingNumb == 11 && moneyInt >= 20 && energyInt >= 5) // apartment state
             {
                 Instantiate(apartment, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
@@ -132,7 +133,7 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
             }
-            else if (buildingNumb == 12 && moneyInt >= 20 && energyInt >= 5) //smallstore
+            else if (buildingNumb == 12 && moneyInt >= 20 && energyInt >= 5) // smallstore state
             {
                 Instantiate(smallStore, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
@@ -141,7 +142,7 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
             }
-            else if (buildingNumb == 13 && moneyInt >= 20 && energyInt >= 5) //supermarket
+            else if (buildingNumb == 13 && moneyInt >= 20 && energyInt >= 5) // supermarket state
             {
                 Instantiate(supermarket, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
@@ -176,7 +177,7 @@ public class SpawnOnPlane : MonoBehaviour
     {
         GetComponent<Renderer>().material = green;
     }
-    //create function with same name as listener to change building numb
+    // Create function with same name as listener to change building numb
     void factoryButton()
     {
         buildingNumb = 1;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3463de68c1a4eb14d950c2c18c26e458
+guid: bf581b4c274e6f646b9988eba8413fa1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -12,7 +12,8 @@ ModelImporter:
     2100008: Mat_Window
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Apartment01
+    4300000: Apartment02
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

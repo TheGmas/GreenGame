@@ -119,7 +119,7 @@ public class SpawnOnPlane : MonoBehaviour
             }
             else if (buildingNumb == 10 && moneyInt >= 25) // solarPanel state
             {
-                Instantiate(solarPanel, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+                Instantiate(solarPanel, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-135, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();

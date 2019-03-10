@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class RollOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // Set this to a seperate panel with text of building description
-    public GameObject houseRollover, factoryRollover, demolishRollover;
+    public GameObject houseRollover, apartmentRollover, factoryRollover, supermarketRollover, treeRollover, windturbineRollover, solarpanelRollover, demolishRollover;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -22,6 +22,26 @@ public class RollOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (gameObject.name == "Demolish")
         {
             demolishRollover.SetActive(true);
+        }
+        if (gameObject.name == "Apartments")
+        {
+            apartmentRollover.SetActive(true);
+        }
+        if (gameObject.name == "SmallStore" || gameObject.name == "Supermarket")
+        {
+            supermarketRollover.SetActive(true);
+        }
+        if (gameObject.name == "WindTurbine")
+        {
+            windturbineRollover.SetActive(true);
+        }
+        if (gameObject.name == "Tree_1" || gameObject.name == "Tree_2")
+        {
+            treeRollover.SetActive(true);
+        }
+        if (gameObject.name == "SolarPanel")
+        {
+            solarpanelRollover.SetActive(true);
         }
     }
 
@@ -38,6 +58,26 @@ public class RollOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (gameObject.name == "Demolish")
         {
             demolishRollover.SetActive(false);
+        }
+        if (gameObject.name == "Apartments")
+        {
+            apartmentRollover.SetActive(false);
+        }
+        if (gameObject.name == "SmallStore" || gameObject.name == "Supermarket")
+        {
+            supermarketRollover.SetActive(false);
+        }
+        if (gameObject.name == "WindTurbine")
+        {
+            windturbineRollover.SetActive(false);
+        }
+        if (gameObject.name == "Tree_1" || gameObject.name == "Tree_2")
+        {
+            treeRollover.SetActive(false);
+        }
+        if (gameObject.name == "SolarPanel")
+        {
+            solarpanelRollover.SetActive(false);
         }
     }
 }

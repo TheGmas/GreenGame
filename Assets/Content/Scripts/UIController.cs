@@ -16,15 +16,15 @@ public class UIController : MonoBehaviour {
     void openShop()
     {
         shopPanel.gameObject.SetActive(true);
-        shopButtonPanel.gameObject.SetActive(false);
-        backPanel.gameObject.SetActive(true);
+        //shopButtonPanel.gameObject.SetActive(false);
+        //backPanel.gameObject.SetActive(true);
     }
 
     void closeShop()
     {
         shopPanel.gameObject.SetActive(false);
-        shopButtonPanel.gameObject.SetActive(true);
-        backPanel.gameObject.SetActive(false);
+        //shopButtonPanel.gameObject.SetActive(true);
+        //backPanel.gameObject.SetActive(false);
     }
 
 }

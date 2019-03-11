@@ -7,10 +7,10 @@ using UnityEngine.EventSystems;
 public class RollOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // Set this to a seperate panel with text of building description
-    public GameObject houseRollover, apartmentRollover, factoryRollover, supermarketRollover, treeRollover, windturbineRollover, solarpanelRollover, demolishRollover;
+    public GameObject houseRollover, apartmentRollover, factoryRollover, supermarketRollover, treeRollover, windturbineRollover, solarpanelRollover, demolishRollover, shopWindow;
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
+        public void OnPointerEnter(PointerEventData eventData)
+        {
         if (gameObject.name == "House_1" || gameObject.name == "House_2" || gameObject.name == "House_3")
         {
             houseRollover.SetActive(true);

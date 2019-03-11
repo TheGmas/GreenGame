@@ -7,10 +7,12 @@ public class SpawnOnPlane : MonoBehaviour
 {
     bool spawned = false;
     int buildingNumb, moneyInt, energyInt;
-    public GameObject factory, factory1, house, house2, house3, windTurbine, tree1, tree2, solarPanel, apartment, smallStore, supermarket;
+    public GameObject factory, factory1, house, house2, house3, windTurbine, tree1, tree2, solarPanel, apartment, smallStore, supermarket, shopPanel, houseRoll, factoryRoll, demoRoll, aptRoll, superRoll, treeRoll, windRoll, solarRoll;
     public Material green, lightGreen;
     public Button factoryBtn, factory1Btn, houseBtn, houseBtn2, houseBtn3, windTurbineBtn, tree1Btn, tree2Btn, solarPanelBtn, apartmentBtn, smallStoreBtn, supermarketBtn, backBtn, demolishBtn;
     public Text moneyText, energyText;
+    
+    
     GameObject build;
     RaycastHit BuildCheck;
     public Transform buildCheck;
@@ -46,7 +48,7 @@ public class SpawnOnPlane : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!spawned)
+        if (!spawned && shopPanel.activeSelf == false)
         {
             // Creating the if statement. 
             // The building numb here should be the same as the one desired - set below in a seperate function.
@@ -61,6 +63,7 @@ public class SpawnOnPlane : MonoBehaviour
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 2 && moneyInt >= 20 && energyInt >= 5) //house1 state
             {
@@ -70,6 +73,7 @@ public class SpawnOnPlane : MonoBehaviour
                 energyInt -= 5;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 4 && moneyInt >= 20 && energyInt >= 5) //house2 state
             {
@@ -79,6 +83,7 @@ public class SpawnOnPlane : MonoBehaviour
                 energyInt -= 5;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 5 && moneyInt >= 25) // factory1 state
             {
@@ -86,6 +91,7 @@ public class SpawnOnPlane : MonoBehaviour
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 6 && moneyInt >= 20 && energyInt >= 5) // house3 state
             {
@@ -95,6 +101,7 @@ public class SpawnOnPlane : MonoBehaviour
                 energyInt -= 5;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 7 && moneyInt >= 25) // windturbine state
             {
@@ -102,6 +109,7 @@ public class SpawnOnPlane : MonoBehaviour
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 8 && moneyInt >= 25) // tree1 state
             {
@@ -109,6 +117,7 @@ public class SpawnOnPlane : MonoBehaviour
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 9 && moneyInt >= 25) // tree2 state
             {
@@ -116,6 +125,7 @@ public class SpawnOnPlane : MonoBehaviour
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 10 && moneyInt >= 25) // solarPanel state
             {
@@ -123,6 +133,7 @@ public class SpawnOnPlane : MonoBehaviour
                 spawned = true;
                 moneyInt -= 20;
                 moneyText.text = moneyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 11 && moneyInt >= 20 && energyInt >= 5) // apartment state
             {
@@ -132,6 +143,7 @@ public class SpawnOnPlane : MonoBehaviour
                 energyInt -= 5;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 12 && moneyInt >= 20 && energyInt >= 5) // smallstore state
             {
@@ -141,6 +153,7 @@ public class SpawnOnPlane : MonoBehaviour
                 energyInt -= 5;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
+                shopPanel.SetActive(true);
             }
             else if (buildingNumb == 13 && moneyInt >= 20 && energyInt >= 5) // supermarket state
             {
@@ -150,6 +163,7 @@ public class SpawnOnPlane : MonoBehaviour
                 energyInt -= 5;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
+                shopPanel.SetActive(true);
             }
         }
         else if (buildingNumb == 3)
@@ -181,58 +195,196 @@ public class SpawnOnPlane : MonoBehaviour
     void factoryButton()
     {
         buildingNumb = 1;
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false); 
     }
     void factory1Button()
     {
         buildingNumb = 5;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void houseButton()
     {
         buildingNumb = 2;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void houseButton2()
     {
         buildingNumb = 4;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void houseButton3()
     {
         buildingNumb = 6;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void windTurbineButton()
     {
         buildingNumb = 7;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void tree1Button()
     {
         buildingNumb = 8;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void tree2Button()
     {
         buildingNumb = 9;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void solarPanelButton()
     {
         buildingNumb = 10;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void apartmentButton()
     {
         buildingNumb = 11;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void smallStoreButton()
     {
         buildingNumb = 12;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void supermarketButton()
     {
         buildingNumb = 13;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void returnButton()
     {
         buildingNumb = 0;
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
     void destroyBuild()
     {
         buildingNumb = 3;
+        shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        houseRoll.SetActive(false);
+        factoryRoll.SetActive(false);
+        demoRoll.SetActive(false);
+        aptRoll.SetActive(false);
+        superRoll.SetActive(false);
+        treeRoll.SetActive(false);
+        windRoll.SetActive(false);
+        solarRoll.SetActive(false);
     }
    
 }

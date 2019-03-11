@@ -7,14 +7,17 @@ public class ResourceController : MonoBehaviour {
 
     public Text moneyText, energyText; // Creates a public text gameObject
     public int factoryNumb, factoryEnergy, houseNumb, houseMoney;
-    float time;
+    float time, tempNumb;
+    public Slider temp;
 
 	// Use this for initialization
 	void Start ()
     {
+       
         // Set as Default
         moneyText.text = "100";
         energyText.text = "5";
+        temp.value = 0.5f;
     }
 	
 	// Update is called once per frame
@@ -34,6 +37,9 @@ public class ResourceController : MonoBehaviour {
 
             houseMoney += houseNumb * 2;
             moneyText.text = houseMoney.ToString();
+
+            temp.value += factoryNumb * 0.001f;
+            
 
             time = 0;
         }

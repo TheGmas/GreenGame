@@ -57,110 +57,114 @@ public class SpawnOnPlane : MonoBehaviour
             // use moneyText.text = moneyInt.ToString(); and/or energyText.text = energyInt.ToString(); to update on screen
             // After that, button should work and place buildings.
 
-            if (buildingNumb == 1 && moneyInt >= 25) //factory state
+            if (buildingNumb == 1 && moneyInt >= 25  && energyInt >= 50) //factory state
             {
                 build = Instantiate(factory, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0))) as GameObject;
                 spawned = true;
-                moneyInt -= 20;
+                moneyInt -= 25;
+                energyInt -= 50;
                 moneyText.text = moneyInt.ToString();
+                energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 2 && moneyInt >= 20 && energyInt >= 5) //house1 state
+            else if (buildingNumb == 2 && moneyInt >= 20 && energyInt >= 20) //house1 state
             {
                 Instantiate(house, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
-                energyInt -= 5;
+                energyInt -= 20;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 4 && moneyInt >= 20 && energyInt >= 5) //house2 state
+            else if (buildingNumb == 4 && moneyInt >= 20 && energyInt >= 20) //house2 state
             {
                 Instantiate(house2, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
-                energyInt -= 5;
+                energyInt -= 20;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 5 && moneyInt >= 25) // factory1 state
+            else if (buildingNumb == 5 && moneyInt >= 25 && energyInt >=50) // factory1 state
             {
                 Instantiate(factory1, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
+                moneyInt -= 25;
+                energyInt -= 50;
                 moneyText.text = moneyInt.ToString();
+                energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 6 && moneyInt >= 20 && energyInt >= 5) // house3 state
+            else if (buildingNumb == 6 && moneyInt >= 20 && energyInt >= 20) // house3 state
             {
                 Instantiate(house3, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
                 moneyInt -= 20;
-                energyInt -= 5;
+                energyInt -= 20;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 7 && moneyInt >= 25) // windturbine state
+            else if (buildingNumb == 7 && moneyInt >= 150) // windturbine state
             {
                 Instantiate(windTurbine, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
+                moneyInt -= 150;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 8 && moneyInt >= 25) // tree1 state
+            else if (buildingNumb == 8 && moneyInt >= 10) // tree1 state
             {
                 Instantiate(tree1, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
+                moneyInt -= 10;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 9 && moneyInt >= 25) // tree2 state
+            else if (buildingNumb == 9 && moneyInt >= 10) // tree2 state
             {
                 Instantiate(tree2, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
+                moneyInt -= 10;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 10 && moneyInt >= 25) // solarPanel state
+            else if (buildingNumb == 10 && moneyInt >= 35) // solarPanel state
             {
                 Instantiate(solarPanel, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-135, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
+                moneyInt -= 35;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 11 && moneyInt >= 20 && energyInt >= 5) // apartment state
+            else if (buildingNumb == 11 && moneyInt >= 275 && energyInt >= 80) // apartment state
             {
                 Instantiate(apartment, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
-                energyInt -= 5;
+                moneyInt -= 275;
+                energyInt -= 80;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 12 && moneyInt >= 20 && energyInt >= 5) // smallstore state
+            else if (buildingNumb == 12 && moneyInt >= 125 && energyInt >= 25) // smallstore state
             {
                 Instantiate(smallStore, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
-                energyInt -= 5;
+                moneyInt -= 125;
+                energyInt -= 25;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
             }
-            else if (buildingNumb == 13 && moneyInt >= 20 && energyInt >= 5) // supermarket state
+            else if (buildingNumb == 13 && moneyInt >= 250 && energyInt >= 80) // supermarket state
             {
                 Instantiate(supermarket, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
                 spawned = true;
-                moneyInt -= 20;
-                energyInt -= 5;
+                moneyInt -= 250;
+                energyInt -= 80;
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);

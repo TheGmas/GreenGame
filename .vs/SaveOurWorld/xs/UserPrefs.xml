@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{8C1E43BE-CC0D-4B71-7D2F-16F114AD58CC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Content/Scripts/HowToPlay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Content/Scripts/SpawnOnPlane.cs">
     <Files>
-      <File FileName="Assets/Content/Scripts/SpawnOnPlane.cs" Line="23" Column="53" />
+      <File FileName="Assets/Content/Scripts/SpawnOnPlane.cs" Line="23" Column="49" />
       <File FileName="Assets/Content/Scripts/RollOver.cs" Line="80" Column="24" />
       <File FileName="Assets/Content/Scripts/UIController.cs" Line="13" Column="9" />
       <File FileName="Assets/Content/Scripts/HowToPlay.cs" Line="11" Column="5" />

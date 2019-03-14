@@ -15,8 +15,8 @@ public class ResourceController : MonoBehaviour {
     {
        
         // Set as Default
-        moneyText.text = "100";
-        energyText.text = "5";
+        moneyText.text = "200";
+        energyText.text = "100";
         temp.value = 0.5f;
     }
 	

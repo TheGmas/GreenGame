@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class SpawnOnPlane : MonoBehaviour
 {
-    bool spawned = false;
+    bool spawned = false, transSpawn = false;
     int buildingNumb, moneyInt, energyInt;
-    public GameObject factory, factory1, house, house2, house3, windTurbine, tree1, tree2, solarPanel, apartment, smallStore, supermarket, shopPanel, houseRoll, factoryRoll, demoRoll, aptRoll, superRoll, treeRoll, windRoll, solarRoll;
+    public GameObject rightClickPanel, factory, factory1, house, house2, house3, windTurbine, tree1, tree2, solarPanel, apartment, smallStore, supermarket, shopPanel, houseRoll, factoryRoll, demoRoll, aptRoll, superRoll, treeRoll, windRoll, solarRoll, house1HL, house2HL, house3HL, factory1HL, factory2HL, storeHL, superstoreHL, solarHL, tree01HL, tree02HL, windHL, apartmentHL;
     public Material green, lightGreen;
     public Button factoryBtn, factory1Btn, houseBtn, houseBtn2, houseBtn3, windTurbineBtn, tree1Btn, tree2Btn, solarPanelBtn, apartmentBtn, smallStoreBtn, supermarketBtn, backBtn, demolishBtn;
     public Text moneyText, energyText;
@@ -44,6 +44,14 @@ public class SpawnOnPlane : MonoBehaviour
     {
         moneyInt = int.Parse(moneyText.text);
         energyInt = int.Parse(energyText.text);
+
+        if(rightClickPanel.activeSelf == true && Input.GetMouseButton(1))
+        {
+            shopPanel.SetActive(true);
+            rightClickPanel.SetActive(false);
+
+            destroyTrans();
+        }
 	}
 
     void OnMouseDown()
@@ -66,6 +74,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 2 && moneyInt >= 20 && energyInt >= 20) //house1 state
             {
@@ -76,6 +94,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 4 && moneyInt >= 20 && energyInt >= 20) //house2 state
             {
@@ -86,6 +114,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 5 && moneyInt >= 25 && energyInt >=50) // factory1 state
             {
@@ -96,6 +134,17 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+                print("yes");
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 6 && moneyInt >= 20 && energyInt >= 20) // house3 state
             {
@@ -106,6 +155,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 7 && moneyInt >= 150) // windturbine state
             {
@@ -114,6 +173,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyInt -= 150;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 8 && moneyInt >= 10) // tree1 state
             {
@@ -122,6 +191,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyInt -= 10;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 9 && moneyInt >= 10) // tree2 state
             {
@@ -130,6 +209,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyInt -= 10;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 10 && moneyInt >= 35) // solarPanel state
             {
@@ -138,6 +227,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyInt -= 35;
                 moneyText.text = moneyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 11 && moneyInt >= 275 && energyInt >= 80) // apartment state
             {
@@ -148,6 +247,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 12 && moneyInt >= 125 && energyInt >= 25) // smallstore state
             {
@@ -158,6 +267,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
             else if (buildingNumb == 13 && moneyInt >= 250 && energyInt >= 80) // supermarket state
             {
@@ -168,6 +287,16 @@ public class SpawnOnPlane : MonoBehaviour
                 moneyText.text = moneyInt.ToString();
                 energyText.text = energyInt.ToString();
                 shopPanel.SetActive(true);
+                rightClickPanel.SetActive(false);
+
+                Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+                foreach (Collider hit in built)
+                {
+                    if (hit.tag == "Highlight")
+                    {
+                        Destroy(hit.gameObject);
+                    }
+                }
             }
         }
         else if (buildingNumb == 3)
@@ -189,11 +318,84 @@ public class SpawnOnPlane : MonoBehaviour
     void OnMouseOver()
     {
         GetComponent<Renderer>().material = lightGreen;
+
+        if(rightClickPanel.activeSelf == true && buildingNumb == 2 && !spawned && transSpawn == false)
+        {
+            Instantiate(house1HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 4 && !spawned && transSpawn == false)
+        {
+            Instantiate(house2HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 1 && !spawned && transSpawn == false)
+        {
+            Instantiate(factory2HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 5 && !spawned && transSpawn == false)
+        {
+            Instantiate(factory1HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 6 && !spawned && transSpawn == false)
+        {
+            Instantiate(house3HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 7 && !spawned && transSpawn == false)
+        {
+            Instantiate(windHL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 8 && !spawned && transSpawn == false)
+        {
+            Instantiate(tree01HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 9 && !spawned && transSpawn == false)
+        {
+            Instantiate(tree02HL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 10 && !spawned && transSpawn == false)
+        {
+            Instantiate(solarHL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 11 && !spawned && transSpawn == false)
+        {
+            Instantiate(apartmentHL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 12 && !spawned && transSpawn == false)
+        {
+            Instantiate(storeHL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
+        if (rightClickPanel.activeSelf == true && buildingNumb == 13 && !spawned && transSpawn == false)
+        {
+            Instantiate(superstoreHL, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.Euler(new Vector3(-90, 180, 0)));
+            transSpawn = true;
+        }
     }
 
     void OnMouseExit()
     {
         GetComponent<Renderer>().material = green;
+        transSpawn = false;
+
+
+         Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 8f);
+         foreach (Collider hit in built)
+         {
+             if (hit.tag == "Highlight")
+             {
+                print("hit highlight");
+                 Destroy(hit.gameObject);
+             }
+         }
     }
     // Create function with same name as listener to change building numb
     void factoryButton()
@@ -207,7 +409,8 @@ public class SpawnOnPlane : MonoBehaviour
         superRoll.SetActive(false);
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
-        solarRoll.SetActive(false); 
+        solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void factory1Button()
     {
@@ -222,6 +425,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void houseButton()
     {
@@ -236,6 +440,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void houseButton2()
     {
@@ -250,6 +455,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void houseButton3()
     {
@@ -264,6 +470,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void windTurbineButton()
     {
@@ -278,6 +485,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void tree1Button()
     {
@@ -292,6 +500,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void tree2Button()
     {
@@ -306,6 +515,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void solarPanelButton()
     {
@@ -320,6 +530,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void apartmentButton()
     {
@@ -334,6 +545,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void smallStoreButton()
     {
@@ -348,6 +560,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void supermarketButton()
     {
@@ -362,6 +575,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void returnButton()
     {
@@ -375,6 +589,7 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
     void destroyBuild()
     {
@@ -389,6 +604,19 @@ public class SpawnOnPlane : MonoBehaviour
         treeRoll.SetActive(false);
         windRoll.SetActive(false);
         solarRoll.SetActive(false);
+        rightClickPanel.SetActive(true);
     }
-   
+
+    void destroyTrans()
+    {
+        Collider[] built = Physics.OverlapSphere(gameObject.transform.position, 1f);
+        foreach (Collider hit in built)
+        {
+            if (hit.tag == "Highlight")
+            {
+                Destroy(hit.gameObject);
+            }
+        }
+    }
+
 }

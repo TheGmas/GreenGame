@@ -13,6 +13,7 @@ TagManager:
   - Tree
   - Solar Panel
   - Wind Turbine
+  - Highlight
   layers:
   - Default
   - TransparentFX

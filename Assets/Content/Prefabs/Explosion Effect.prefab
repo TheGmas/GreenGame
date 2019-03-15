@@ -179,6 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 527b728d27e9ff145914cfb8ffe20c7e, type: 3}
+  displayUI: {fileID: 0}
+  delay: 5
 --- !u!198 &198990229959585556
 ParticleSystem:
   m_ObjectHideFlags: 1

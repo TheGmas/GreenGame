@@ -12,7 +12,7 @@ public class EarthExplode : MonoBehaviour
         explosionSource = GetComponent<AudioSource>();
     }
 
-    void ExplodeSound()
+    void PlayExplosion()
     {
         explosionSource.PlayOneShot(explosionClip, 0.0f);
     }

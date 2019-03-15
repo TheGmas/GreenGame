@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Content\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Content\Scripts\DestructibleMesh.cs" />
+    <Compile Include="Assets\Content\Scripts\DisplayUI.cs" />
     <Compile Include="Assets\Content\Scripts\EarthExplode.cs" />
     <Compile Include="Assets\Content\Scripts\HowToPlay.cs" />
     <Compile Include="Assets\Content\Scripts\MoveCamera.cs" />
